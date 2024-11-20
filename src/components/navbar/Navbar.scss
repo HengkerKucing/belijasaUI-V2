@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: 0.5s all ease;
+
+  &.active {
+    background: white;
+    color: black;
+
+    .logo {
+      .text {
+        color: black !important;
+      }
+      .dot {
+        color: #C850C0 ;
+      }
+    }
+
+    button {
+      background-color: #4158D0 !important;
+      color: white !important;
+      border: none !important;
+    }
+  }
+
+  .container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+
+      .text {
+        color: white;
+      }
+
+      .dot {
+        font-weight: bold;
+        color: #FFD700;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+
+      span {
+        white-space: nowrap;
+        color: white;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .options {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          background-color: white;
+          border-radius: 10px;
+          z-index: 999;
+          border: 1px solid lightgrey;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 200px;
+          font-weight: 300;
+          color: gray;
+        }
+      }
+
+      button {
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #FFD700;
+          border-color: #FFD700;
+          color: #4158D0;
+        }
+      }
+    }
+  }
+
+  hr {
+    width: calc(100% - 2px);
+    height: 0;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu {
+    width: 1200px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &.active {
+    .links span, .menu {
+      color: #4158D0;
+    }
+
+    hr {
+      border-color: #ebe9e9;
+    }
+  }
+}
